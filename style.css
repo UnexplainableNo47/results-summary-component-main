@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.main{
+    width: 700px;
+    height: 500px;
+    display: inline-flex;
+    box-shadow: 0 0px 5px 0px #dedede;
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
+}
+.results{
+    width: 350px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
+    color: white;
+}
+.circle{
+    position: relative;
+    height: 180px;
+    width: 180px;
+    background: linear-gradient(to bottom, var(--Violet-blue),var(--Persian-blue));
+    border-radius: 50%;
+    margin: auto;
+    padding: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.summary{
+    width: 350px;
+    height: 100%;
+    border-radius: 0rem 1.25rem 1.25rem 0rem;
+}
+.summary > div{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 2.25rem;
+    margin: 0.75rem;
+    padding: 0.4rem;
+    border-radius: 0.35rem;
+    
+}
+.inline{
+    display: inline-flex;
+    align-items: center;
+}
+img{
+    margin: auto;
+    padding: 0.3rem;
+}
+.Reaction{
+    border: 1px solid var(--Light-red);
+    background-color: var(--fLight-red);
+}
+.Memory{
+    border: 1px solid var(--Orangey-yellow);
+    background-color: var(--fOrangey-yellow);
+}
+.Verbal{
+    border: 1px solid var(--Green-teal);
+    background-color: var(--fLight-red);
+}
+.Visual{
+    border: 1px solid var(--Cobalt-blue);
+    background-color: var(--fCobalt-blue);
+}
