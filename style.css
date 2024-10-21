@@ -34,10 +34,12 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
+     background-color: var(--Pale-blue);
 }
 .main{
-    width: 700px;
-    height: 500px;
+    width: max(700px);
+    height: max(500px);
+    background-color: var(--White);
     display: inline-flex;
     box-shadow: 0 0px 5px 0px #dedede;
     border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
@@ -67,8 +69,8 @@
 }
 .circle{
     position: relative;
-    height: 180px;
-    width: 180px;
+    height: min(180px,100%);
+    width: min(180px,100%);
     background: linear-gradient(to bottom, var(--Violet-blue),var(--Persian-blue));
     border-radius: 50%;
     padding: auto;
@@ -77,9 +79,7 @@
     justify-content: center;
 }
 .summary{
-        
     display: flex;
- 
     justify-content: center;
     flex-direction: column;
 
@@ -137,7 +137,53 @@ img{
     border-radius: 30px;
     background-color: var(--Dark-gray-blue);
     text-align: center;
+    cursor: pointer;
+    transition: 150ms, ease;
 }
+.button:hover{
+    background-color: var(--Pale-blue);
+    color: var(--Dark-gray-blue);
+}
+.button:focus{
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+
+}
+
+@media only screen and (max-width:425px) {
+    .container{
+        height: 100%;
+    }
+    .main{
+        flex-direction: column;
+        width: max(425px,100%);
+        height: max-content;
+        display: block;
+        border-radius: 0;
+    }
+    .results{
+        width: 100%;
+        border-radius: 0 0 1.25rem  1.25rem;
+        gap: 0;
+    }
+    .results > h2{
+        margin: 0;
+    }
+    .circle{
+        position: relative;
+        height: 30vh;
+        width: 30vh;
+        background: linear-gradient(to bottom, var(--Violet-blue),var(--Persian-blue));
+        border-radius: 50%;
+        padding: auto;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .summary{
+        width: auto;
+    }
+}
+
 .percentage{
     color: var(--Dark-gray-blue);
     font-weight: 500;
@@ -151,7 +197,7 @@ h1{
 }
 .results > h2{
     color: var(--Pale-blue);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .summary > h3{
     color: var(--Dark-gray-blue);
