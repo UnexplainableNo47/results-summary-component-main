@@ -146,6 +146,8 @@ img{
 }
 .button:focus{
     background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    color: var(--White);
+    box-shadow: 0 0px 5px 0px var(--Pale-blue);
 
 }
 
